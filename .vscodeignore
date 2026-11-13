@@ -10,3 +10,4 @@ images/**
 !images/icon.png
 *.vsix
 .gitignore
+.github/**

@@ -1,0 +1,12 @@
+.vscode/**
+test/**
+out/test/**
+scripts/**
+**/*.map
+**/*.ts
+tsconfig.json
+node_modules/**
+images/**
+!images/icon.png
+*.vsix
+.gitignore

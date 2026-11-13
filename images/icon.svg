@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2d30"/>
+      <stop offset="1" stop-color="#1e1f22"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="52" fill="url(#bg)"/>
+  <rect x="8.5" y="8.5" width="239" height="239" rx="51.5" fill="none" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Collapsed import line -->
+  <path d="M46 72 l14 14 l-14 14" fill="none" stroke="#8c8f94" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="78" y="76" width="70" height="20" rx="10" fill="#cf8e6d"/>
+  <rect x="160" y="70" width="52" height="32" rx="9" fill="#3c3f44" stroke="#5a5d63" stroke-width="2"/>
+  <circle cx="174" cy="86" r="4.5" fill="#bcbec4"/>
+  <circle cx="186" cy="86" r="4.5" fill="#bcbec4"/>
+  <circle cx="198" cy="86" r="4.5" fill="#bcbec4"/>
+
+  <!-- Code below -->
+  <rect x="46" y="134" width="56" height="16" rx="8" fill="#cf8e6d" fill-opacity="0.85"/>
+  <rect x="112" y="134" width="98" height="16" rx="8" fill="#56a8f5" fill-opacity="0.85"/>
+  <rect x="70" y="164" width="84" height="16" rx="8" fill="#bcbec4" fill-opacity="0.55"/>
+  <rect x="164" y="164" width="46" height="16" rx="8" fill="#6aab73" fill-opacity="0.85"/>
+  <rect x="70" y="194" width="62" height="16" rx="8" fill="#bcbec4" fill-opacity="0.55"/>
+  <rect x="142" y="194" width="40" height="16" rx="8" fill="#c77dbb" fill-opacity="0.85"/>
+</svg>

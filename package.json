@@ -1,0 +1,125 @@
+{
+  "name": "tuck-imports",
+  "displayName": "Tuck Imports",
+  "description": "Collapse the import block of JS/TS files to a single `import ⋯` line, like Android Studio.",
+  "version": "1.0.0",
+  "publisher": "oidoug",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oidoug/tuck-imports.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oidoug/tuck-imports/issues"
+  },
+  "homepage": "https://github.com/oidoug/tuck-imports#readme",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#1e1f22",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "imports",
+    "fold",
+    "folding",
+    "collapse",
+    "hide",
+    "android studio",
+    "intellij",
+    "typescript",
+    "javascript",
+    "react"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:vue",
+    "onLanguage:svelte",
+    "onLanguage:astro",
+    "onStartupFinished"
+  ],
+  "main": "./out/src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tuckImports.fold",
+        "title": "Fold Imports",
+        "category": "Tuck Imports"
+      },
+      {
+        "command": "tuckImports.unfold",
+        "title": "Unfold Imports",
+        "category": "Tuck Imports"
+      },
+      {
+        "command": "tuckImports.toggle",
+        "title": "Toggle Imports",
+        "category": "Tuck Imports"
+      }
+    ],
+    "configuration": {
+      "title": "Tuck Imports",
+      "properties": {
+        "tuckImports.autoFold": {
+          "type": "boolean",
+          "default": true,
+          "description": "Fold the import block when a file is opened."
+        },
+        "tuckImports.compact": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Show the folded block as `import ⋯` instead of the first import line."
+        },
+        "tuckImports.includeRequire": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Treat top-level CommonJS `require()` declarations as imports."
+        },
+        "tuckImports.minLines": {
+          "type": "integer",
+          "default": 2,
+          "minimum": 2,
+          "description": "Only auto-fold when the import block spans at least this many lines."
+        },
+        "tuckImports.languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact",
+            "vue",
+            "svelte",
+            "astro"
+          ],
+          "description": "Language IDs where imports are folded."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "test": "npm run compile && node --test \"out/test/*.test.js\"",
+    "package": "vsce package --no-dependencies",
+    "deploy": "vsce publish --no-dependencies",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "@types/vscode": "~1.85.0",
+    "@vscode/vsce": "^4.1.1",
+    "typescript": "~5.9.3"
+  }
+}
